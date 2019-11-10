@@ -1,0 +1,27 @@
+<main>
+    {{#if addProductPage}}
+        <h1>Welcome to Add Products Page</h1>
+    {{/if}}
+
+    <form class="add-product" method="POST" enctype="multipart/form-data" action="/admin/add-product">
+        
+        <div class="add-product-input">
+            <span>Title:</span> <input type="text" name="title"><br>
+        </div>
+        <div class="add-product-input">
+            <span>Description:</span> <input type="text" name="description"><br>
+        </div>
+        <div class="add-product-input">
+            <span>Price:</span> <input type="text" name="price"><br>
+        </div>
+         <div class="add-product-input">
+            <span>Image:</span> <input type="file" name="image"><br>
+        </div>
+        <button type="submit">Add Product</button>
+        <input type="hidden" name="_csrf" value={{csrfToken}}>
+    </form>
+
+    {{#if errorMessage}}
+        <p>{{errorMessage}}</p>
+    {{/if}}
+</main>

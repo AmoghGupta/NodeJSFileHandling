@@ -1,0 +1,31 @@
+<main>
+    <div class="container-buy">
+         <h2>Previous Orders</h2>
+         <p>Hi {{userName}}, {{pageMessage}}</p>
+         
+            
+                
+                {{#each orders as |order|}}
+                
+                    <p>Order:{{@index}} <a href="/orders/{{order.orderId}}">Download invoice</a></p>
+                    <table width="100%">
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Image</th>
+                        </tr>
+                        {{#each order.orderInfo as |item|}}
+                            <tr>
+                                <td>{{item.title}}</td>
+                                <td>{{item.price}}</td> 
+                                <td><img src="/{{item.image}}" height="40" width="40" alt="myimage"/></td>
+                            </tr>
+                        {{/each}}
+                    </table>
+                {{/each}}
+              
+                
+     
+    </div>
+    
+</main>

@@ -1,0 +1,31 @@
+<main>
+    {{#if signUpPage}}
+        <h1 style="background-color: #2874f0">{{pageTitle}}</h1>
+    {{/if}}
+
+    <form method="POST" action="/signup" class="signup-container">
+        <div>
+            <span>Username:</span> <input type="email" name="email"><br>
+        </div>
+        <div>
+            <span>Password:</span> <input type="password" name="password"><br>
+        </div>
+        <button type="submit">SignUp</button>
+        
+        <div class="signup-login">
+            <a href="/reset">Reset Password</a>
+        </div>
+
+        <div style="padding: 1rem;width: 40%;margin: 0 auto;border: 1px solid;margin-top: 2rem;">
+            <span style="color: cadetblue;font-weight: bold;">Already have an account?</span> <a style="color:black" href="/login">Sign in!</a>
+        </div>
+
+        <input type="hidden" name="_csrf" value={{csrfToken}}>
+    </form>
+
+    {{#if errorMessage}}
+        <p>{{errorMessage}}</p>
+    {{/if}}
+
+   
+</main>

@@ -1,0 +1,22 @@
+<main>
+    <div class="container-buy">
+         <h2>Order Placed</h2>
+         <p>Hi {{userName}}, {{pageMessage}}</p>
+            <table width="100%">
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                </tr>
+               {{#each products as |item|}}
+                  <tr>
+                     <td>{{item.title}}</td>
+                     <td>{{item.price}}</td> 
+                     <td><img src="/{{item.image}}" height="40" width="40" alt="myimage"/></td>
+                  </tr>
+                  {{/each}}
+            </table>
+     <span style="margin-top:1rem;">Download Invoice of your order: <a href="/orders/{{orderId}}">Download invoice</a></span>
+    </div>
+    
+</main>

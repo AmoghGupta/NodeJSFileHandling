@@ -1,0 +1,22 @@
+<main>
+     {{#if detailsPage}}
+        <h1 style="background:#2874f0;">Welcome to Product Details Page</h1>
+    {{/if}}
+    <h1 style="background:#2874f0;">You selected the following product:</h1>
+       <ul class="selected-product-details">
+            <li>
+                <span>Title:</span><p>{{product.title}} </p><br> 
+                <span>Id:</span><p>{{product._id}} </p><br> 
+                <span>Description:</span><p>{{product.description}} </p><br> 
+                <span>Price:</span><p>{{product.price}} </p><br> 
+                <div style="display: flex;">
+                    <span>Image:</span>
+                    <p><img src="/{{product.image}}" height="200" width="200" alt="myimage"/> </p><br> 
+                </div>
+                 
+                
+            </li>
+            
+       </ul>
+    </p>
+</main>

@@ -1,0 +1,40 @@
+<main>
+     {{#if shopPage}}
+        <h1 style="background-color: #2874f0">Welcome to Shopping Page</h1>
+    {{/if}}
+    <div class="container-buy">
+         <h2>My Products</h2>
+         <div>
+           <ul>
+               <li>
+                  <a href='/previousOrders' style="color:#2874f0;">Previous Orders</a> 
+               </li>
+            </ul>
+        </div>
+         <p>{{pageMessage}}</p>
+            <ul>
+               {{#each products as |item|}}
+                  <li>
+                     <a href='/products/{{item._id}}'>{{item.title}}</a> 
+                     <a href="/admin/remove-product/{{item._id}}" title="Remove Item">X</a>
+                  </li>
+                  {{/each}}
+            </ul>
+
+          {{#if hasItems}}
+            <form method="POST" action="/admin/buy-products" class="login-container">
+               <button type="submit" style="cursor: pointer;">BUY ITEMS</button>
+               <input type="hidden" name="_csrf" value={{csrfToken}}>      
+            </form>
+         {{/if}}  
+         
+          
+    </div>
+    
+    
+    
+     {{!-- <span>Download Invoice: <a href="/orders/12345">Download invoice</a></span> --}}
+     {{#if errorMessage}}
+        <p>{{errorMessage}}</p>
+    {{/if}}
+</main>

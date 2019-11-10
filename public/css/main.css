@@ -1,0 +1,171 @@
+html{
+    height: 100%;
+    background: url('https://i.pinimg.com/originals/10/04/a2/1004a274da5fe93bf47d3b13f12625fa.jpg');
+    background-size: cover;
+}
+
+
+body{
+    margin: 0;
+}
+
+h1{
+    padding-top: 0;
+    margin-top: 0;
+    color: white;
+    text-align: center;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    float: left;
+}
+nav li{
+    width: 7rem;
+    height: 1rem;
+    border: 1px solid lightgrey;
+    text-align: center;
+    padding: 5px;
+    background-color: #2874f0;
+    color: white;
+}
+nav a{
+    color: white;
+}
+
+main{
+    clear:both;
+}
+
+.container-buy{
+    background: white;
+    border: 1px solid grey;
+    padding: 1rem;
+    width: 60%;
+    /* text-align: center; */
+    margin: 0 auto;
+}
+
+.container-buy h2{
+    color:#2874f0;
+
+}
+
+.container-buy p{
+    font-size: 17px;
+    color: currentColor;
+    padding: 5px;
+}
+.container-buy ul{
+    list-style: none;
+    padding: 5px;
+}
+.container-buy li{
+    margin-bottom: 1rem;
+}
+.container-buy a{
+    margin-right: 1rem;
+}
+
+.add-product{
+    height: 15rem;
+    background: aliceblue;
+    width: 50%;
+    margin: 0 auto;
+    padding-left: 2rem;
+}
+.add-product-input{
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+}
+.add-product-input span{
+    font-weight: bold;
+}
+.add-product button{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5px;
+    background: #2874f0;
+    border-radius: 5px;
+    color: white;
+}
+
+.selected-product-details{
+    background: white;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.selected-product-details li{
+    list-style: none;
+}
+.selected-product-details p{
+    display: inline-block;
+}
+.selected-product-details span{
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.login-container,
+.signup-container{
+    background: white;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 3rem;
+}
+.signup-container button,
+.login-container button{
+    padding: 5px;
+    color: white;
+    background-color: #2874f0;
+    border-radius: 5px;
+    width: 8rem;
+    height: 3rem;
+    font-size: 17px;
+}
+.signup-container div,
+.login-container div{
+    margin-bottom: 2rem;
+}
+.signup-container span,
+.login-container span{
+    margin-right: 1rem;
+}
+.signup-login{
+    text-align: center;
+    margin-top: 1rem;
+}
+.signup-login a{
+    color: cadetblue;
+    font-size: 22px;
+}
+
+
+table,tr,th,td{
+    border: 1px solid grey;
+}
+tr,th,td{
+    text-align: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
